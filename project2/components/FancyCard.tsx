@@ -9,8 +9,13 @@ export default function FancyCard() {
       {/* Fancy Card Starts */}
       <View style={[styles.card, styles.elevatedCard]}>
         <Image
-          source={{uri: 'https://imgur.com/NA6CQV0.png'}}
+          src={
+            'https://unsplash.com/photos/X_6lI192qgs/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8OHx8aGF3YSUyMG1laGFsfGVufDB8fHx8MTcxMDg0OTA1NXww&force=true'
+          }
           style={styles.cardImage}
+          progressiveRenderingEnabled={true}
+          resizeMethod={'resize'}
+          resizeMode="cover"
         />
 
         <View style={styles.cardBody}>
