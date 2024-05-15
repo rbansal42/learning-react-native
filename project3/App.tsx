@@ -43,7 +43,6 @@ export default function App() {
     // Checks
     if (upperCase) {
       characterList += upperCaseChars;
-      console.log('characters: ' + upperCaseChars);
     }
     if (lowerCase) {
       characterList += lowerCaseChars;
@@ -58,6 +57,7 @@ export default function App() {
     const passwordResult = createPassword(characterList, passwordLength);
 
     setPassword(passwordResult);
+    console.log('Password Generated');
     setIsPassGenerated(true);
   };
 
@@ -90,7 +90,6 @@ export default function App() {
             initialValues={{passwordLength: '15'}} // Formik keeping track of initial values
             validationSchema={passwordSchema}
             onSubmit={values => {
-              console.log(values);
               generatePasswordString(+values.passwordLength);
             }}>
             {({
@@ -216,6 +215,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   subTitle: {
+    color: 'black',
     fontSize: 26,
     fontWeight: '600',
     marginBottom: 2,
